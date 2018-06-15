@@ -89,12 +89,11 @@ end
 # Define your play method below
 
 def play(board)
-      turn(board)
-      if over?(board)
+      until over?(board)
+            turn(board)
             if won?(board)
                         puts "Congratulations #{winner(board)}!"
-            else
-                  puts "Cat's Game!"
             end
       end
+      puts "Cat's Game!"
 end
