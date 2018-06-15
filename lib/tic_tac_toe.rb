@@ -91,8 +91,8 @@ end
 def play(board)
       until over?(board)
             turn(board)
-            if  winningCombo = won?(board)
-                  puts "Congratulations #{board[winningCombo[0]]}!"
+            if won?(board)
+                  puts "Congratulations #{winner(board)}!"
             elsif draw?(board)
                   puts "Cat's Game!"
             end
