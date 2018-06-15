@@ -81,19 +81,20 @@ end
 
 def winner(board)
       # binding.pry
-      if won?(board) && board[won?(board)[0]] == "X"
-            "X"
-      elsif won?(board) && board[won?(board)[0]] == "O"
-            "O"
+      if winningCombo == won?(board)
+            board[winningCombo[0]]
       end
 end
 
 # Define your play method below
 
 def play(board)
-      count = 0
-      until count == 9
-            count += 1
+      until over?(board)
             turn(board)
+      end
+      if  winningCombo == won?(board)
+            puts "Congratulations #{board[winningCombo[0]]}!"
+      elsif draw?(board)
+            puts "Cat's Game!"
       end
 end
