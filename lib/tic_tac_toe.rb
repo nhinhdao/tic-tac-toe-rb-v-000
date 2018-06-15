@@ -89,7 +89,7 @@ end
 # Define your play method below
 
 def play(board)
-      until over?(board)
+      until over?(board) || won?(board)
             turn(board)
             if won?(board)
                         puts "Congratulations #{winner(board)}!"
