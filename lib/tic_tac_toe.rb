@@ -76,7 +76,7 @@ def draw?(board)
 end
 
 def over?(board)
-      (won?(board) && !full?(board))|| draw?(board) || (won?(board) && full?(board))
+      won?(board) || full?(board)
 end
 
 def winner(board)
@@ -89,7 +89,7 @@ end
 # Define your play method below
 
 def play(board)
-      until over?(board) || won?(board)
+      until over?(board)
             turn(board)
             if won?(board)
                         puts "Congratulations #{winner(board)}!"
