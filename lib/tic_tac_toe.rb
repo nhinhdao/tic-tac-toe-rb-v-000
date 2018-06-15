@@ -93,7 +93,7 @@ def play(board)
             turn(board)
       end
       if  winningCombo == won?(board)
-            puts "Congratulations #{board[winningCombo[0]]}!"
+            puts "Congratulations #{board[winningCombo.first}!"
       elsif draw?(board)
             puts "Cat's Game!"
       end
