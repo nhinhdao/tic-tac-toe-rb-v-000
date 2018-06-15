@@ -92,7 +92,8 @@ def play(board)
       until over?(board)
             turn(board)
             if won?(board)
-                        puts "Congratulations #{winner(board)}!"
+                        winner = winner(board)
+                        puts "Congratulations #{winner}!"
             end
       end
       puts "Cat's Game!"
